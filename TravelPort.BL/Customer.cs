@@ -38,7 +38,7 @@ namespace TravelPort.BL
         public List<Address> AddressList { get; set; }
         public string Contact { get; set; }
 
-        public int CustomerType { get; set; }
+        public int CustomerType { get; set; } // not needed
         public bool isVATPayer { get; set; }
         public bool isLocationInEU { get; set; }
         public bool livesInSameEUCountry { get; set; }

@@ -18,7 +18,13 @@ namespace TravelPort.BL
         public int ProductId { get; set; }
         public decimal? CurrentPrice { get; set; }
         public string ProductDescription { get; set; }
-        public string ProductName { get; set; }
+        private string _ProductName;
+
+        public string ProductName
+        {
+            get { return _ProductName; }
+            set { _ProductName = value; }
+        }
 
         public override bool Validate()
         {
@@ -38,6 +44,8 @@ namespace TravelPort.BL
         {
             return ProductName;
         }
+
+        
 
     }
     
