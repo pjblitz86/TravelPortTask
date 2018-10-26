@@ -20,5 +20,17 @@ namespace TravelPort.BL
         public string ProductDescription { get; set; }
         public string ProductName { get; set; }
 
+        public bool Save()
+        {
+            // code that saves defined product
+            return true;
+        }
+
+        public Product Retrieve(int productId)
+        {
+            // code that retrieves defined product
+            return new Product(productId);
+        }
+
     }
 }
