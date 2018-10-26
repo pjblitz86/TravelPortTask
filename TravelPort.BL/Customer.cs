@@ -5,13 +5,14 @@ namespace TravelPort.BL
 {
     public class Customer
     {
-        public Customer()
+        public Customer(): this(0)
         {
-
+            
         }
         public Customer(int customerId)
         {
             this.CustomerId = customerId;
+            AddressList = new List<Address>();
         }
         public int CustomerId { get; private set; }
         public static int InstanceCount { get; set; }
@@ -34,7 +35,7 @@ namespace TravelPort.BL
             }
         }
 
-        public string Address { get; set; }
+        public List<Address> AddressList { get; set; }
         public string Contact { get; set; }
         public bool isVATPayer { get; set; }
         public bool isLocationInEU { get; set; }
