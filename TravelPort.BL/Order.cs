@@ -25,11 +25,7 @@ namespace TravelPort.BL
             return true;
         }
 
-        public Order Retrieve(int orderId)
-        {
-            // code that retrieves defined order
-            return new Order(orderId);
-        }
+        
 
         public bool Validate()
         {

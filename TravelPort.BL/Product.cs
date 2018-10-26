@@ -16,21 +16,8 @@ namespace TravelPort.BL
         }
 
         public int ProductId { get; set; }
-        public Decimal? CurrentPrice { get; private set; }
+        public double? CurrentPrice { get; set; }
         public string ProductDescription { get; set; }
         public string ProductName { get; set; }
-
-        public bool Save()
-        {
-            // code that saves defined product
-            return true;
-        }
-
-        public Product Retrieve(int productId)
-        {
-            // code that retrieves defined product
-            return new Product(productId);
-        }
-
     }
 }

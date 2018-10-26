@@ -40,24 +40,6 @@ namespace TravelPort.BL
         public bool isLocationInEU { get; set; }
         public bool livesInSameEUCountry { get; set; }
 
-        public bool Save()
-        {
-            // code that saves defined customer
-            return true;
-        }
-
-        public Customer Retrieve(int customerId)
-        {
-            // code that retrieves defined customer
-            return new Customer(customerId);
-        }
-
-        public List<Customer> Retrieve()
-        {
-            // code that returns all customers
-            return new List<Customer>();
-        }
-
         public bool Validate()
         {
             var isValid = true;
