@@ -18,7 +18,7 @@ namespace TravelPort.BL
             {
                 product.ProductName = "testProduct";
                 product.ProductDescription = "testDesc";
-                product.CurrentPrice = 14.44;
+                product.CurrentPrice = 14.44M;
             }
             return product;
         }

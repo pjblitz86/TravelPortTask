@@ -28,8 +28,6 @@ namespace TravelPort.BL
             return true;
         }
 
-        
-
         public bool Validate()
         {
             var isValid = true;
@@ -39,6 +37,11 @@ namespace TravelPort.BL
                 isValid = false;
             }
             return isValid;
+        }
+
+        public override string ToString()
+        {
+            return OrderDate.Value.Date + " (" + OrderId + ")";
         }
     }
 }
