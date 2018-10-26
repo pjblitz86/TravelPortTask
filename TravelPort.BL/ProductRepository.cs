@@ -23,10 +23,21 @@ namespace TravelPort.BL
             return product;
         }
 
-        public bool Save()
+        public bool Save(Product product)
         {
-            // code that saves defined product
-            return true;
+            var success = true;
+            if (product.HasChanges && product.isValid)
+            {
+                if(product.IsNew)
+                {
+                    // call an insert stored procedure
+                } else
+                {
+                    // call an update stored procedure
+                }
+            }
+            
+            return success;
         }
     }
 }

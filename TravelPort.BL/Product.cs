@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TravelPort.BL
 {
-    public class Product
+    public class Product: EntityBase
     {
         public Product()
         {
@@ -20,7 +20,7 @@ namespace TravelPort.BL
         public string ProductDescription { get; set; }
         public string ProductName { get; set; }
 
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if(string.IsNullOrWhiteSpace(ProductName))
