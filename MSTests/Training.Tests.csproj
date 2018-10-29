@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TravelPort.BL\TravelPort.BL.csproj" />
+    <ProjectReference Include="..\TravelPort.BL\Training.csproj" />
   </ItemGroup>
 
 </Project>
