@@ -6,6 +6,6 @@ namespace TravelPortTask
 {
     public interface ICountryService
     {
-        bool IsCountryInEU(string code, string name);
+        bool IsCountryInEU(string code);
     }
 }

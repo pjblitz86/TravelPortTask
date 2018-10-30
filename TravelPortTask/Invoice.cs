@@ -4,24 +4,11 @@ using System.Text;
 
 namespace TravelPortTask
 {
-    public class Invoice: IInvoiceService
+    public class Invoice
     {
-        public Invoice invoice;
-        private Customer _customer;
-        private Supllier _supllier;
-        private double _amount;
-
-        public Invoice()
-        {
-            
-        }
-
-        public Invoice GetInvoice(Supllier supllier, Customer customer, double amount)
-        {
-            _supllier = supllier;
-            _customer = customer;
-            _amount = amount;
-            return invoice;
-        }
+        public Customer customer;
+        public Supllier supllier;
+        public double VAT { get; set; }
+        public double Amount { get; set; }
     }
 }
