@@ -10,6 +10,7 @@ namespace TravelPortTaskTests
         Supllier supllier = new Supllier();
         VATService vatService = new VATService();
 
+        // Supllier is not VAT
         [TestMethod]
         public void SupllierNotVATTest()
         {
@@ -24,8 +25,7 @@ namespace TravelPortTaskTests
             Assert.AreEqual(expected, actual);
         }
 
-        // VAT supllier
-        // TaxCalculation_CustomerNotEUTest
+        // supllier is VAT
 
         [TestMethod]
         public void CustomerNotEUTest()
@@ -45,7 +45,7 @@ namespace TravelPortTaskTests
         // Customer in EU
 
         [TestMethod]
-        public void EU_notVAT_diffCountryTest()
+        public void CustEU_notVAT_diffCountryTest()
         {
             // Arrange
             supllier.IsVAT_TaxPayer = true;
@@ -63,37 +63,42 @@ namespace TravelPortTaskTests
             Assert.AreEqual(expected, actual);
         }
 
-        // EU_isVAT_diffCountryTest
+        [TestMethod]
+        public void CustEU_isVAT_diffCountryTest()
+        {
+            // Arrange
+            supllier.IsVAT_TaxPayer = true;
+            customer.IsVAT_TaxPayer = true;
+            customer.IsInEU = true;
+            customer.Country2DigitCode = "lt";
+            supllier.Country2DigitCode = "de";
 
-        //[TestMethod]
-        //public void EU_isVAT_diffCountryTest()
-        //{
-        //    Arrange
-        //    supllier.IsVAT_TaxPayer = true;
-        //    customer.IsInEU = true;
-        //    customer.Country2DigitCode = "lt";
-        //    supllier.Country2DigitCode = "de";
+            var expected = 0;
 
-        //    var expected = 0.21;
+            // Act
+            var actual = vatService.CalculateVAT(customer, supllier);
 
-        //    Act
-        //   var actual = vatService.CalculateVAT(customer, supllier);
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
 
-        //    Assert
-        //    Assert.AreEqual(expected, actual);
-        //}
+        [TestMethod]
+        public void CustEU_isVAT_sameCountryTest()
+        {
+            // Arrange
+            supllier.IsVAT_TaxPayer = true;
+            customer.IsVAT_TaxPayer = true;
+            customer.IsInEU = true;
+            customer.Country2DigitCode = "de";
+            supllier.Country2DigitCode = "de";
 
-        //    [TestMethod]
-        //    public void TaxCalculation_EU_isVAT_sameCountryTest()
-        //    {
-        //        // Arrange
-        //        var expected = 0.21;
+            var expected = 0.19;
 
-        //        // Act
-        //        var actual = customer.calculateCustomerTaxVAT(true, true, true, "lt");
+            // Act
+            var actual = vatService.CalculateVAT(customer, supllier);
 
-        //        // Assert
-        //        Assert.AreEqual(expected, actual);
-        //    }
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

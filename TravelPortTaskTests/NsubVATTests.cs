@@ -7,9 +7,9 @@ namespace TravelPortTaskTests
     [TestClass]
     public class NsubVATTests
     {
-        VATService vatService;
-        Customer customer;
-        Supllier supllier;
+        Customer customer = new Customer();
+        Supllier supllier = new Supllier();
+        VATService vatService = new VATService();
 
         [TestInitialize]
         public void TestIn()
