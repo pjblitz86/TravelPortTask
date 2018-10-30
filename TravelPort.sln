@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Training", "TravelPort.BL\Training.csproj", "{EBFAF507-FEE6-436B-9285-37FFF973DE33}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Training.Tests", "MSTests\Training.Tests.csproj", "{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelPortTaskTests", "TravelPortTaskTests\TravelPortTaskTests.csproj", "{84012FA2-5B23-4F67-A7E2-EA20F7765C2C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelPortTask", "TravelPortTask\TravelPortTask.csproj", "{B482DA58-7FE5-435C-BA7F-7AB9D48DC7CC}"
@@ -23,38 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Debug|ARM.Build.0 = Debug|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Debug|x64.Build.0 = Debug|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Debug|x86.Build.0 = Debug|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Release|ARM.ActiveCfg = Release|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Release|ARM.Build.0 = Release|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Release|x64.ActiveCfg = Release|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Release|x64.Build.0 = Release|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Release|x86.ActiveCfg = Release|Any CPU
-		{EBFAF507-FEE6-436B-9285-37FFF973DE33}.Release|x86.Build.0 = Release|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Debug|ARM.Build.0 = Debug|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Debug|x64.Build.0 = Debug|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Debug|x86.Build.0 = Debug|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Release|ARM.ActiveCfg = Release|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Release|ARM.Build.0 = Release|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Release|x64.ActiveCfg = Release|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Release|x64.Build.0 = Release|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Release|x86.ActiveCfg = Release|Any CPU
-		{223BFFD9-7A10-48B3-AA0C-826DBDD9A14A}.Release|x86.Build.0 = Release|Any CPU
 		{84012FA2-5B23-4F67-A7E2-EA20F7765C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84012FA2-5B23-4F67-A7E2-EA20F7765C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84012FA2-5B23-4F67-A7E2-EA20F7765C2C}.Debug|ARM.ActiveCfg = Debug|Any CPU
