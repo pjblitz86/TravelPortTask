@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TravelPort.BL
+namespace Training
 {
     public class Order
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TravelPort.BL
+namespace Training
 {
     public class Customer
     {

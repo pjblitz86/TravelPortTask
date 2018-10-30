@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TravelPort.BL;
+using Training;
 
-namespace MSTests
+namespace Training.Tests
 {
     [TestClass]
     public class RetrieveOrderDisplayTest

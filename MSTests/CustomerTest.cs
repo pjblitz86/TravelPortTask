@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TravelPort.BL;
+using Training;
 
-namespace MSTests
+namespace Training.Tests
 {
     [TestClass]
     public class CustomerTest
