@@ -8,51 +8,46 @@ namespace TravelPortTask
     {
         public double VAT { get; set; }
 
-
-        private double CalculateVAT(Customer customer, Supllier supllier)
+        private CountryService _countryService;
+        public VATCalculator(CountryService countryService)
         {
+            _countryService = countryService;
+        }
 
-
-            // implementation
+        public double CalculateVAT(Customer customer, Supllier supllier)
+        {
+            if(supllier.IsVAT_TaxPayer)
+            {
+                if(customer.IsInEU)
+                {
+                    if(!customer.IsVAT_TaxPayer && !(customer.Country2DigitCode == supllier.Country2DigitCode))
+                    {
+                        VAT = GetVAT_Rate(customer.Country2DigitCode);
+                    }
+                    else if(customer.Country2DigitCode == supllier.Country2DigitCode)
+                    {
+                        VAT = GetVAT_Rate(customer.Country2DigitCode);
+                    }
+                    else
+                    {
+                        VAT = 0;
+                    }
+                }
+                else
+                {
+                    VAT = 0;
+                }
+            }
+            else
+            {
+                VAT = 0;
+            }
             return VAT;
         }
 
-        //public double calculateCustomerTaxVAT(bool isEU, bool isVAT, bool inSameCountryAsSupllier, string euCountry2LetterCode)
-        //{
-        //    double taxVAT;
-
-        //    if(isSupllierVATPayer)
-        //    {
-        //        if(isEU)
-        //        {
-        //            if (!isVAT && !inSameCountryAsSupllier)
-        //            {
-        //                taxVAT = getVAT_Rate(euCountry2LetterCode);
-        //            }
-        //            else if (inSameCountryAsSupllier)
-        //            {
-        //                taxVAT = 0.21; // Supllier is in LT
-        //            }
-        //            else
-        //            {
-        //                taxVAT = 0;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            taxVAT = 0;
-        //        }
-        //    } else
-        //    {
-        //        taxVAT = 0;
-        //    }
-
-        //    return taxVAT;
-        //}
-
-        private double GetVAT_Rate(string euCountry2LetterCode)
+        private double GetVAT_Rate(string EU2DigitCode)
         {
-            switch (euCountry2LetterCode.ToLower())
+            switch (EU2DigitCode.ToLower())
             {
                 case "lu": return 0.17;
                 case "mt": return 0.18;
