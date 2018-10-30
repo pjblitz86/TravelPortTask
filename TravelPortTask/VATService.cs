@@ -4,12 +4,16 @@ using System.Text;
 
 namespace TravelPortTask
 {
-    public class VATCalculator
+    public class VATService
     {
         public double VAT { get; set; }
 
         private CountryService _countryService;
-        public VATCalculator(CountryService countryService)
+        public VATService()
+        {
+
+        }
+        public VATService(CountryService countryService)
         {
             _countryService = countryService;
         }
@@ -45,9 +49,9 @@ namespace TravelPortTask
             return VAT;
         }
 
-        private double GetVAT_Rate(string EU2DigitCode)
+        private double GetVAT_Rate(string EUCountry2DigitCode)
         {
-            switch (EU2DigitCode.ToLower())
+            switch (EUCountry2DigitCode.ToLower())
             {
                 case "lu": return 0.17;
                 case "mt": return 0.18;

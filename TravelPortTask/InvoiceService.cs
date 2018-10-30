@@ -6,12 +6,20 @@ namespace TravelPortTask
 {
     public class InvoiceService: IInvoiceService
     {
-        private InvoiceService _invoice;
-        public InvoiceService GetInvoice(Supllier supllier, Customer customer, double amount)
+        public Invoice invoice;
+        private VATService _vatService;
+        public Invoice GetInvoice(Customer customer, Supllier supllier, double amount, VATService vatService)
         {
+            _vatService = vatService;
 
-            
-            return _invoice;
+            invoice = new Invoice()
+            {
+                VAT = _vatService.CalculateVAT(customer, supllier),
+                Amount = amount,
+                customer = customer,
+                supllier = supllier
+            };
+            return invoice;
         }
     }
 }

@@ -12,15 +12,16 @@ namespace TravelPortTask
         public bool IsJuridical { get; set; }
         public bool IsVAT_TaxPayer { get; set; }
         public bool IsInEU { get; set; }
-        
 
         private ICountryService _countryService;
+        public Customer()
+        {
+
+        }
         public Customer(ICountryService countryService)
         {
             _countryService = countryService;
             IsInEU = _countryService.IsCountryInEU(Country2DigitCode);
         }
-
-        
     }
 }

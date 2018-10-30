@@ -4,6 +4,6 @@ namespace TravelPortTask
 {
     public interface IInvoiceService
     {
-        InvoiceService GetInvoice(Supllier supllier, Customer customer, double amount);
+        Invoice GetInvoice(Customer customer, Supllier supllier, double amount, VATService vatService);
     }
 }

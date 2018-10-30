@@ -14,6 +14,10 @@ namespace TravelPortTask
         public bool IsInEU { get; set; }
 
         private ICountryService _countryService;
+        public Supllier()
+        {
+
+        }
         public Supllier(ICountryService countryService)
         {
             _countryService = countryService;
